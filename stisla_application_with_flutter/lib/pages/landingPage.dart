@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:stisla_application_with_flutter/pages/registerPage.dart';
+import 'package:stisla_application_with_flutter/pages/routePage.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _LandingPageState extends State<LandingPage> {
     super.initState();
     Timer(const Duration(seconds: 1), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => Register()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => RoutePage()));
     });
   }
 
