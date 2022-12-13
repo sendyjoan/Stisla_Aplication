@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:stisla_application_with_flutter/pages/landingHomePage.dart';
 import 'package:stisla_application_with_flutter/pages/landingPage.dart';
 import 'package:stisla_application_with_flutter/api/http_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -33,7 +34,7 @@ class _LoginPage extends State<LoginPage> {
     } else {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => LandingPage()),
+        MaterialPageRoute(builder: (context) => LandingHome()),
       );
     }
   }
@@ -96,9 +97,9 @@ class _LoginPage extends State<LoginPage> {
                   fillColor: Color.fromARGB(255, 0, 0, 0),
                   labelText: 'Password',
                   labelStyle: const TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Nunito'),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.bold,
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
                         width: 3, color: Color.fromARGB(255, 255, 255, 255)),
