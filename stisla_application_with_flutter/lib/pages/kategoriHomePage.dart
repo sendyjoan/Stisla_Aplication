@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:stisla_application_with_flutter/api/crud_helper.dart';
 import 'package:stisla_application_with_flutter/model/kategori_model.dart';
+import 'package:stisla_application_with_flutter/pages/deleteKategoriPage.dart';
+import 'package:stisla_application_with_flutter/pages/editKategoriPage.dart';
 import 'package:stisla_application_with_flutter/pages/tambahKategoriPage.dart';
 
 class MainKategori extends StatefulWidget {
@@ -140,21 +142,21 @@ class _MainKategoriState extends State<MainKategori> {
                       ),
                     ),
                   ),
-                  // onDismissed: (DismissDirection direction) {
-                  //   if (direction == DismissDirection.startToEnd) {
-                  //     showDialog(
-                  //         context: context,
-                  //         builder: (context) {
-                  //           return EditKategori(category: categories[index]);
-                  //         });
-                  //   } else {
-                  //     showDialog(
-                  //         context: context,
-                  //         builder: (context) {
-                  //           return DeleteCategori(category: categories[index]);
-                  //         });
-                  //   }
-                  // },
+                  onDismissed: (DismissDirection direction) {
+                    if (direction == DismissDirection.startToEnd) {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return EditKategori(category: categories[index]);
+                          });
+                    } else {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return DeleteCategori(category: categories[index]);
+                          });
+                    }
+                  },
                   child: Container(
                     height: 60,
                     margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
