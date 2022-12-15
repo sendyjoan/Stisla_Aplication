@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stisla_application_with_flutter/pages/homePage.dart';
+import 'package:stisla_application_with_flutter/pages/kategoriHomePage.dart';
 import 'package:stisla_application_with_flutter/pages/profilePage.dart';
 
 class LandingHome extends StatefulWidget {
@@ -25,10 +26,10 @@ class _LandingHomeState extends State<LandingHome> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          // NavigationDestination(
-          //   icon: Icon(Icons.list),
-          //   label: 'Kategori',
-          // ),
+          NavigationDestination(
+            icon: Icon(Icons.list),
+            label: 'Kategori',
+          ),
           NavigationDestination(
             icon: Icon(Icons.accessibility),
             label: 'Profil',
@@ -37,7 +38,7 @@ class _LandingHomeState extends State<LandingHome> {
       ),
       body: <Widget>[
         const HomePage(),
-        // const MainKategori(),
+        const MainKategori(),
         const ProfilePage(),
       ][currentPageIndex],
     );
