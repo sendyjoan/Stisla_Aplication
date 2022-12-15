@@ -5,6 +5,7 @@ import 'package:stisla_application_with_flutter/pages/loginPage.dart';
 import 'package:stisla_application_with_flutter/pages/registerPage.dart';
 import 'package:stisla_application_with_flutter/pages/homePage.dart';
 import 'package:stisla_application_with_flutter/pages/landingHomePage.dart';
+import 'package:stisla_application_with_flutter/pages/profilePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/register": (context) => const RegisterPage(),
         "/main": (context) => const LandingHome(),
         "/mainhome": (context) => const HomePage(),
+        "/mainprofil": (context) => const ProfilePage(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
