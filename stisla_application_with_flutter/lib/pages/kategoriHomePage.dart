@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:stisla_application_with_flutter/api/crud_helper.dart';
 import 'package:stisla_application_with_flutter/model/kategori_model.dart';
+import 'package:stisla_application_with_flutter/pages/tambahKategoriPage.dart';
 
 class MainKategori extends StatefulWidget {
   const MainKategori({
@@ -79,21 +80,21 @@ class _MainKategoriState extends State<MainKategori> {
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
         automaticallyImplyLeading: false,
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: const Color(0xFF6777EE),
-      //   onPressed: () {
-      //     showDialog(
-      //         context: context,
-      //         builder: (context) {
-      //           return const TambahKategori();
-      //         });
-      //   },
-      //   child: const Icon(
-      //     Icons.add,
-      //     size: 40,
-      //     color: Colors.black,
-      //   ),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return const TambahKategori();
+              });
+        },
+        child: const Icon(
+          Icons.new_label,
+          size: 35,
+          color: Colors.black,
+        ),
+      ),
       body: Container(
         color: Colors.black,
         child: <Widget>[
