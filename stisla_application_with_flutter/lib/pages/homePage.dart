@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class MainHome extends StatefulWidget {
-  const MainHome({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
   @override
-  State<MainHome> createState() => _MainHomeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MainHomeState extends State<MainHome> {
+class _HomePageState extends State<HomePage> {
   int currentPageIndex = 0;
   String token = '';
   String name = '';
@@ -35,7 +35,7 @@ class _MainHomeState extends State<MainHome> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'HOME',
+            'Home',
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
@@ -55,9 +55,20 @@ class _MainHomeState extends State<MainHome> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'Selamat Datang',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      name,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -68,16 +79,6 @@ class _MainHomeState extends State<MainHome> {
                 ),
               ),
             ),
-            Expanded(
-              child: Text(
-                name,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            )
           ],
         ),
       ][currentPageIndex],

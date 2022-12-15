@@ -38,7 +38,7 @@ class _LandingHomeState extends State<LandingHome> {
         ],
       ),
       body: <Widget>[
-        const MainHome(),
+        const HomePage(),
         // const MainKategori(),
         // const MainProfil(),
       ][currentPageIndex],
