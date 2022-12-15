@@ -159,7 +159,7 @@ class _MainKategoriState extends State<MainKategori> {
                     margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     decoration: BoxDecoration(
                         border: Border.all(
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: Color.fromARGB(255, 0, 0, 0),
                       width: 1,
                     )),
                     child: ListTile(
