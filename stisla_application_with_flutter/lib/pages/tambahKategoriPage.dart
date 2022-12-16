@@ -28,11 +28,11 @@ class _TambahKategoriState extends State<TambahKategori> {
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                   borderSide: const BorderSide(width: 2, color: Colors.grey),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(width: 2, color: Colors.grey),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 hintText: 'e.x Makanan',
                 hintStyle: const TextStyle(
@@ -51,7 +51,7 @@ class _TambahKategoriState extends State<TambahKategori> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
               ),
-              primary: const Color(0xff2da9ef),
+              primary: Color.fromARGB(255, 0, 0, 0),
             ),
             onPressed: () {
               doAddCategory();

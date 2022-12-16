@@ -62,15 +62,15 @@ class _EditKategoriState extends State<EditKategori> {
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(5),
               ),
-              primary: const Color(0xff2da9ef),
+              primary: Color.fromARGB(255, 0, 0, 0),
             ),
             onPressed: () {
               doEditCategory();
             },
             child: const Text(
-              'Add',
+              'Change',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
