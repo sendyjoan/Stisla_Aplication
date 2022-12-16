@@ -74,7 +74,6 @@ class _MainKategoriState extends State<MainKategori> {
           child: Text(
             'Kategori',
             style: TextStyle(
-              fontFamily: 'Nunito',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -97,15 +96,16 @@ class _MainKategoriState extends State<MainKategori> {
           color: Colors.black,
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: Container(
         color: Colors.black,
         child: <Widget>[
           ListView.builder(
               controller: scrollController,
-              physics: const AlwaysScrollableScrollPhysics(),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 25.0,
+              physics: AlwaysScrollableScrollPhysics(),
+              padding: EdgeInsets.symmetric(
+                horizontal: 10.0,
+                vertical: 30.0,
               ),
               itemCount: categories.length,
               itemBuilder: (context, index) {
@@ -169,9 +169,7 @@ class _MainKategoriState extends State<MainKategori> {
                       title: Text(
                         categories[index].name,
                         style: const TextStyle(
-                            fontFamily: 'Nunito',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                            fontWeight: FontWeight.bold, color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),

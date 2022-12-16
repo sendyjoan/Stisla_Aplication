@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:stislaflutter/models/category_models.dart';
 
 class HttpHelper {
-  final String _baseUrl = 'http://192.168.0.103:8000/api/';
+  final String _baseUrl = 'http://192.168.2.100:8000/api/';
   final String token = '';
 
   Future<Response> login(String email, String password, String deviceId) async {
